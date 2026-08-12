@@ -2,23 +2,376 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Rangoli Designs By Swapnali - Designs & Price List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Rangoli Designs By Swapnali</title>
+
   <style>
-    html,body{height:100%;margin:0;background:#222}
-    body{font-family:Arial,sans-serif;display:flex;flex-direction:column}
-    .bar{height:52px;box-sizing:border-box;background:#111;color:#fff;
-         display:flex;align-items:center;justify-content:space-between;
-         padding:0 14px;font-size:15px}
-    .bar a{color:#fff;text-decoration:none;background:#333;padding:8px 12px;border-radius:6px}
-    iframe{border:0;flex:1;width:100%;background:#fff}
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #faf5f7;
+      color: #3d2030;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    .header {
+      background: linear-gradient(135deg, #5b1738, #9b2d62);
+      color: white;
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    }
+
+    .logo {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.35);
+
+      font-size: 30px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 23px;
+      font-weight: 700;
+    }
+
+    .header p {
+      margin: 7px 0 0;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+
+    /* =========================
+       ACTION SECTION
+       ========================= */
+
+    .actions {
+      background: white;
+      padding: 18px 15px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      border-bottom: 1px solid #eadde2;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+
+      padding: 11px 18px;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+    }
+
+
+    /* VIEW PDF */
+
+    .view-btn {
+      background: #6f1d45;
+      color: white;
+    }
+
+
+    /* DOWNLOAD PDF */
+
+    .download-btn {
+      background: #f3e7ed;
+      color: #6f1d45;
+      border: 1px solid #e2ccd6;
+    }
+
+
+    /* INSTAGRAM */
+
+    .instagram-btn {
+      background: linear-gradient(
+        45deg,
+        #f58529,
+        #dd2a7b,
+        #8134af
+      );
+
+      color: white;
+    }
+
+
+    /* =========================
+       CONTENT
+       ========================= */
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      padding: 15px;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 5px 10px 14px;
+    }
+
+    .intro h2 {
+      margin: 0 0 5px;
+
+      font-size: 17px;
+      color: #5b1738;
+    }
+
+    .intro p {
+      margin: 0;
+
+      font-size: 12px;
+      color: #806b74;
+    }
+
+
+    /* =========================
+       PDF VIEWER
+       ========================= */
+
+    .pdf-container {
+      background: white;
+
+      border-radius: 10px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 5px 25px rgba(70,30,45,0.15);
+
+      border: 1px solid #e4d8dd;
+    }
+
+    iframe {
+      display: block;
+
+      width: 100%;
+      height: calc(100vh - 235px);
+
+      min-height: 500px;
+
+      border: none;
+
+      background: white;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      text-align: center;
+
+      padding: 15px;
+
+      font-size: 11px;
+
+      color: #806b74;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 700px) {
+
+      .header {
+        padding: 20px 15px;
+      }
+
+      .header h1 {
+        font-size: 19px;
+      }
+
+      .header p {
+        font-size: 11px;
+      }
+
+      .actions {
+        padding: 12px 8px;
+
+        gap: 6px;
+      }
+
+      .btn {
+        padding: 10px 8px;
+
+        flex: 1;
+
+        font-size: 11px;
+      }
+
+      .content {
+        padding: 8px;
+      }
+
+      .intro {
+        padding: 5px 5px 10px;
+      }
+
+      .intro h2 {
+        font-size: 15px;
+      }
+
+      iframe {
+        height: calc(100vh - 205px);
+        min-height: 500px;
+      }
+    }
+
   </style>
 </head>
+
+
 <body>
-  <div class="bar">
-    <strong>Rangoli Designs By Swapnali</strong>
-    <a href="Rangoli_Designs_By_Swapnali.pdf" target="_blank" rel="noopener">Open PDF</a>
+
+  <!-- =========================
+       HEADER
+       ========================= -->
+
+  <header class="header">
+
+    <div class="logo">
+      🌸
+    </div>
+
+    <h1>Rangoli Designs By Swapnali</h1>
+
+    <p>
+      Beautiful • Traditional • Ready-Made Rangoli Designs
+    </p>
+
+  </header>
+
+
+  <!-- =========================
+       BUTTONS
+       ========================= -->
+
+  <div class="actions">
+
+    <!-- VIEW PDF -->
+
+    <a
+      href="Rangoli_Designs_By_Swapnali.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn view-btn"
+    >
+      📖 View PDF
+    </a>
+
+
+    <!-- DOWNLOAD PDF -->
+
+    <a
+      href="Rangoli_Designs_By_Swapnali.pdf"
+      download="Rangoli_Designs_By_Swapnali.pdf"
+      class="btn download-btn"
+    >
+      ⬇️ Download PDF
+    </a>
+
+
+    <!-- INSTAGRAM -->
+
+    <a
+  href="https://www.instagram.com/rangoli_by_swapnali?igsh=ZDZpZzR2MTNoMWo0"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="btn instagram-btn"
+  style="display:inline-flex; align-items:center; justify-content:center; gap:8px;"
+>
+  <img
+    src="instagram.png"
+    style="width:28px; height:28px; object-fit:contain; display:block;"
+  />
+  @rangoli_by_swapnali
+</a>
+
   </div>
-  <iframe src="Rangoli_Designs_By_Swapnali.pdf" title="Rangoli Designs By Swapnali"></iframe>
+
+
+  <!-- =========================
+       MAIN CONTENT
+       ========================= -->
+
+  <main class="content">
+
+    <div class="intro">
+
+      <h2>
+        ✨ Our Rangoli Collection ✨
+      </h2>
+
+      
+
+    
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    © Rangoli Designs By Swapnali
+    <br>
+
+    <a
+      href="https://www.instagram.com/rangoli_by_swapnali?igsh=ZDZpZzR2MTNoMWo0"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="color:#c02a6d;text-decoration:none;font-weight:bold;"
+    >
+      @rangoli_by_swapnali
+    </a>
+
+  </footer>
+
 </body>
 </html>
